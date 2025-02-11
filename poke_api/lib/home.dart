@@ -14,6 +14,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          leading: Icon(Icons.catching_pokemon),
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: Text(widget.title),
         ),
@@ -33,12 +34,14 @@ class _HomePageState extends State<HomePage> {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
-          tooltip: 'Increment',
-          child: const Icon(Icons.circle_sharp),
+          tooltip: 'Buscar',
+          child: const Icon(Icons.search),
         ),
         bottomNavigationBar: BottomNavigationBar(items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Inicio"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.pin_drop), label: "Ubicaciones"),
+          BottomNavigationBarItem(icon: Icon(Icons.stars), label: "Equipos"),
         ]));
   }
 }
